@@ -15,6 +15,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        URLSession.shared.dataTask(with: API.threeMarches()) { data, response, error in
+//            guard let data = data else { return }
+//            do {
+//                let marchesResponse = try JSONDecoder().decode(ThreeMarchesResponse.self, from: data)
+//                let marches = ResponseConverter.converte(marchesResponse: marchesResponse)
+//                dump(marches)
+//            } catch let jsonError {
+//                print(jsonError)
+//            }
+//        }.resume()
+        
+        let apiManager = ApiManager()
+        
+        apiManager.loadThreeMarches { optionalThreeMarches in
+            guard let threeMarches = optionalThreeMarches else {
+                print("ХУИТА")
+                return
+            }
+            
+            dump(threeMarches)
+        }
+        
         return true
     }
 
