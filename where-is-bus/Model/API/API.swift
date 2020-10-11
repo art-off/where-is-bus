@@ -16,7 +16,17 @@ struct API {
         return URL(string: "\(adress)/informing/wap/marsh/?action=getListRoute")!
     }
     
-    static func timetableFor(marchTitle: String) -> URL {
+    static func marcheFor(marchNumber: Int, for type: TransportType) -> URL {
+        let marchTitle: String
+        switch type {
+        case .bus:
+            marchTitle = "\(marchNumber)"
+        case .trolleybuses:
+            marchTitle = "\(marchNumber)%F2"
+        case .trams:
+            marchTitle = "\(marchNumber)%F2%F0"
+        }
+        
         return URL(string: "\(adress)/informing/wap/marsh/?m=\(marchTitle)&action=getMarshData")!
     }
     

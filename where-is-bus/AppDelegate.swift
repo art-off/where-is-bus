@@ -16,27 +16,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        URLSession.shared.dataTask(with: API.threeMarches()) { data, response, error in
-//            guard let data = data else { return }
-//            do {
-//                let marchesResponse = try JSONDecoder().decode(ThreeMarchesResponse.self, from: data)
-//                let marches = ResponseConverter.converte(marchesResponse: marchesResponse)
-//                dump(marches)
-//            } catch let jsonError {
-//                print(jsonError)
-//            }
-//        }.resume()
-        
         let apiManager = ApiManager()
+
+//        apiManager.loadThreeMarches { optionalThreeMarches in
+//            guard let threeMarches = optionalThreeMarches else {
+//                print("ХУИТА")
+//                return
+//            }
+//
+//            dump(threeMarches)
+//        }
         
-        apiManager.loadThreeMarches { optionalThreeMarches in
-            guard let threeMarches = optionalThreeMarches else {
+        apiManager.loadMarche(for: 60, type: .bus) { optionalMarche in
+            guard let marche = optionalMarche else {
                 print("ХУИТА")
                 return
             }
             
-            dump(threeMarches)
+            dump(marche)
         }
+        
+//        print(API.marcheFor(marchNumber: 7, for: .trams))
+//
+//        URLSession.shared.dataTask(with: API.marcheFor(marchNumber: 7, for: .trams)) { data, response, error in
+//            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+//            print(json)
+//        }.resume()
+        
+//        URLSession.shared.dataTask(with: API.marcheFor(marchNumber: 60, for: .bus)) { data, response, error in
+//            do {
+//                let marcheResponse = try JSONDecoder().decode(MarcheResponse.self, from: data!)
+//                let marche = ResponseConverter.converte(marcheResponse: marcheResponse)
+//                dump(marche)
+//            } catch let jsonError {
+//                print(jsonError)
+//            }
+//        }.resume()
         
         return true
     }

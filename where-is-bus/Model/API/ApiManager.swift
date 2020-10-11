@@ -48,4 +48,29 @@ class ApiManager {
         downloadingQueue.addOperation(completionOperation)
     }
     
+    func loadMarche(for marcheNumber: Int, type: TransportType, completion: @escaping (_: Marche?) -> Void) {
+        let url = API.marcheFor(marchNumber: marcheNumber, for: type)
+        
+        var downloadedMarche: Marche?
+        
+        let completionOperation = BlockOperation {
+            completion(downloadedMarche)
+        }
+        
+        let marcheDownloadingOperation = DownloadOperation(session: session, url: url) { data, response, error in
+            guard let marche = ResponseHandler.handleMarche(data, response, error) else {
+                NSLog("Api Manager Load Marche | marche is Nil")
+                completion(nil)
+                self.downloadingQueue.cancelAllOperations()
+                return
+            }
+            downloadedMarche = marche
+        }
+        
+        completionOperation.addDependency(marcheDownloadingOperation)
+        
+        downloadingQueue.addOperation(marcheDownloadingOperation)
+        downloadingQueue.addOperation(completionOperation)
+    }
+    
 }

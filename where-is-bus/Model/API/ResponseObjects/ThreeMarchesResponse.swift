@@ -10,9 +10,9 @@ import Foundation
 
 class ThreeMarchesResponse: Decodable {
     
-    let buses: [String: MarcheResponse]?
-    let trolleybuses: [String: MarcheResponse]?
-    let trams: [String: MarcheResponse]?
+    let buses: [String: TMMarcheResponse]?
+    let trolleybuses: [String: TMMarcheResponse]?
+    let trams: [String: TMMarcheResponse]?
     
     enum CodingKeys: String, CodingKey {
         case buses = "1"
@@ -22,10 +22,10 @@ class ThreeMarchesResponse: Decodable {
     
 }
 
-class MarcheResponse: Decodable {
+class TMMarcheResponse: Decodable {
     
-    let directionA: MarcheDirectionInfoResponse
-    let directionB: MarcheDirectionInfoResponse
+    let directionA: TMMarcheDirectionInfoResponse
+    let directionB: TMMarcheDirectionInfoResponse
     
     enum CodingKeys: String, CodingKey {
         case directionA = "A"
@@ -34,7 +34,7 @@ class MarcheResponse: Decodable {
     
 }
 
-class MarcheDirectionInfoResponse: Decodable {
+class TMMarcheDirectionInfoResponse: Decodable {
     
     let firstStop: String
     let lastStop: String
