@@ -12,11 +12,11 @@
 		4A3121C72522E4B300E22C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3121C52522E4B300E22C84 /* Main.storyboard */; };
 		4A3121C92522E4B400E22C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3121C82522E4B400E22C84 /* Assets.xcassets */; };
 		4A3121CC2522E4B400E22C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3121CA2522E4B400E22C84 /* LaunchScreen.storyboard */; };
+		4A680D022534CE8000280310 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A680D012534CE8000280310 /* CollectionViewHelper.swift */; };
 		4A6B240A252B749D003D02B2 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B2409252B749D003D02B2 /* ResponseHandler.swift */; };
 		4A6B240D252B7568003D02B2 /* ThreeMarches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B240C252B7568003D02B2 /* ThreeMarches.swift */; };
 		4A6B240F252B8687003D02B2 /* ResponseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B240E252B8687003D02B2 /* ResponseConverter.swift */; };
 		4A6BF7E1252C4C570019C935 /* DownloadingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BF7E0252C4C570019C935 /* DownloadingOperation.swift */; };
-		4AA8D9D3252B32390059E461 /* BusesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9D2252B32390059E461 /* BusesViewController.swift */; };
 		4AA8D9D7252B32700059E461 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9D6252B32700059E461 /* API.swift */; };
 		4AA8D9D9252B34BF0059E461 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9D8252B34BF0059E461 /* ApiManager.swift */; };
 		4AA8D9DE252B3DC80059E461 /* ThreeMarchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9DD252B3DC80059E461 /* ThreeMarchesResponse.swift */; };
@@ -34,6 +34,9 @@
 		4AD352B82532EB2F007E1177 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352B72532EB2F007E1177 /* Stop.swift */; };
 		4AD352BB2532EC0C007E1177 /* MarcheLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352BA2532EC0C007E1177 /* MarcheLines.swift */; };
 		4AD352C025337D1D007E1177 /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352BF25337D1D007E1177 /* TransportType.swift */; };
+		4AD352C625341749007E1177 /* BusesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352C525341749007E1177 /* BusesCollectionViewController.swift */; };
+		4AD352CB25341847007E1177 /* TransportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */; };
+		4AD352CC25341847007E1177 /* TransportCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD352CA25341847007E1177 /* TransportCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,11 +47,11 @@
 		4A3121C82522E4B400E22C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A3121CB2522E4B400E22C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A3121CD2522E4B400E22C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A680D012534CE8000280310 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
 		4A6B2409252B749D003D02B2 /* ResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
 		4A6B240C252B7568003D02B2 /* ThreeMarches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeMarches.swift; sourceTree = "<group>"; };
 		4A6B240E252B8687003D02B2 /* ResponseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseConverter.swift; sourceTree = "<group>"; };
 		4A6BF7E0252C4C570019C935 /* DownloadingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingOperation.swift; sourceTree = "<group>"; };
-		4AA8D9D2252B32390059E461 /* BusesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusesViewController.swift; sourceTree = "<group>"; };
 		4AA8D9D6252B32700059E461 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4AA8D9D8252B34BF0059E461 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		4AA8D9DD252B3DC80059E461 /* ThreeMarchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeMarchesResponse.swift; sourceTree = "<group>"; };
@@ -66,6 +69,9 @@
 		4AD352B72532EB2F007E1177 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		4AD352BA2532EC0C007E1177 /* MarcheLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheLines.swift; sourceTree = "<group>"; };
 		4AD352BF25337D1D007E1177 /* TransportType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportType.swift; sourceTree = "<group>"; };
+		4AD352C525341749007E1177 /* BusesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusesCollectionViewController.swift; sourceTree = "<group>"; };
+		4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportCollectionViewCell.swift; sourceTree = "<group>"; };
+		4AD352CA25341847007E1177 /* TransportCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransportCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +106,8 @@
 			children = (
 				4A3121BF2522E4B300E22C84 /* AppDelegate.swift */,
 				4A3121C12522E4B300E22C84 /* SceneDelegate.swift */,
-				4AA8D9D2252B32390059E461 /* BusesViewController.swift */,
+				4AD352C8253417F7007E1177 /* Views */,
+				4AD352C22533833D007E1177 /* ViewControllers */,
 				4AA8D9D4252B32550059E461 /* Model */,
 				4A3121C52522E4B300E22C84 /* Main.storyboard */,
 				4A3121C82522E4B400E22C84 /* Assets.xcassets */,
@@ -109,6 +116,14 @@
 				4AA8D9DF252B564D0059E461 /* Common.swift */,
 			);
 			path = "where-is-bus";
+			sourceTree = "<group>";
+		};
+		4A680D002534CE6600280310 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4A680D012534CE8000280310 /* CollectionViewHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4A6B240B252B7513003D02B2 /* Structures */ = {
@@ -186,6 +201,24 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		4AD352C22533833D007E1177 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A680D002534CE6600280310 /* Helpers */,
+				4AD352C525341749007E1177 /* BusesCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4AD352C8253417F7007E1177 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */,
+				4AD352CA25341847007E1177 /* TransportCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD352CC25341847007E1177 /* TransportCollectionViewCell.xib in Resources */,
 				4A3121CC2522E4B400E22C84 /* LaunchScreen.storyboard in Resources */,
 				4A3121C92522E4B400E22C84 /* Assets.xcassets in Resources */,
 				4A3121C72522E4B300E22C84 /* Main.storyboard in Resources */,
@@ -258,17 +292,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3121C02522E4B300E22C84 /* AppDelegate.swift in Sources */,
+				4AD352CB25341847007E1177 /* TransportCollectionViewCell.swift in Sources */,
 				4AD352B52532EAF4007E1177 /* Transport.swift in Sources */,
 				4AD352AC2532E9E6007E1177 /* Marche.swift in Sources */,
 				4AD352BB2532EC0C007E1177 /* MarcheLines.swift in Sources */,
 				4AD352B22532EAB8007E1177 /* TransportOnEndStop.swift in Sources */,
 				4A6B240F252B8687003D02B2 /* ResponseConverter.swift in Sources */,
 				4AD352A32532E741007E1177 /* TransportOnEndStopResponse.swift in Sources */,
-				4AA8D9D3252B32390059E461 /* BusesViewController.swift in Sources */,
 				4AD352B82532EB2F007E1177 /* Stop.swift in Sources */,
 				4AA8D9DE252B3DC80059E461 /* ThreeMarchesResponse.swift in Sources */,
 				4AA8D9D9252B34BF0059E461 /* ApiManager.swift in Sources */,
 				4AA8D9D7252B32700059E461 /* API.swift in Sources */,
+				4A680D022534CE8000280310 /* CollectionViewHelper.swift in Sources */,
 				4AADB554252F77FE00ED61A4 /* MarcheResponse.swift in Sources */,
 				4A6B240A252B749D003D02B2 /* ResponseHandler.swift in Sources */,
 				4AD352A72532E90C007E1177 /* MarcheLinesResponse.swift in Sources */,
@@ -277,6 +312,7 @@
 				4A6B240D252B7568003D02B2 /* ThreeMarches.swift in Sources */,
 				4AD3529A2532E52E007E1177 /* DirectionDetailInfoResponse.swift in Sources */,
 				4A3121C22522E4B300E22C84 /* SceneDelegate.swift in Sources */,
+				4AD352C625341749007E1177 /* BusesCollectionViewController.swift in Sources */,
 				4AD352A02532E6AE007E1177 /* StopResponse.swift in Sources */,
 				4AD352C025337D1D007E1177 /* TransportType.swift in Sources */,
 				4A6BF7E1252C4C570019C935 /* DownloadingOperation.swift in Sources */,
@@ -356,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

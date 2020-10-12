@@ -27,31 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            dump(threeMarches)
 //        }
         
-        apiManager.loadMarche(for: 60, type: .bus) { optionalMarche in
-            guard let marche = optionalMarche else {
-                print("ХУИТА")
-                return
-            }
-            
-            dump(marche)
-        }
-        
-//        print(API.marcheFor(marchNumber: 7, for: .trams))
-//
-//        URLSession.shared.dataTask(with: API.marcheFor(marchNumber: 7, for: .trams)) { data, response, error in
-//            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
-//            print(json)
-//        }.resume()
-        
-//        URLSession.shared.dataTask(with: API.marcheFor(marchNumber: 60, for: .bus)) { data, response, error in
-//            do {
-//                let marcheResponse = try JSONDecoder().decode(MarcheResponse.self, from: data!)
-//                let marche = ResponseConverter.converte(marcheResponse: marcheResponse)
-//                dump(marche)
-//            } catch let jsonError {
-//                print(jsonError)
+//        apiManager.loadMarche(for: 60, type: .bus) { optionalMarche in
+//            guard let marche = optionalMarche else {
+//                print("ХУИТА")
+//                return
 //            }
-//        }.resume()
+//            
+//            dump(marche)
+//        }
         
         return true
     }
