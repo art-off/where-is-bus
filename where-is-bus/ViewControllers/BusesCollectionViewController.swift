@@ -13,12 +13,11 @@ class BusesCollectionViewController: UICollectionViewController {
     private let reuseIdentifier = TransportCollectionViewCell.reuseIdentifier
     
     // MARK: - Properties for layout Collection View
-    private let itemWidth: CGFloat = 55
-    private let minSpacing: CGFloat = 10
-    private lazy var spacing = CollectionViewHepler.getSpacing(
+    private let spacing: CGFloat = 6
+    private lazy var itemWidth = CollectionViewHepler.getItemWidth(
         byCollectionViewWidth: collectionView.bounds.width,
-        itemWidth: itemWidth,
-        minSpacing: minSpacing)
+        minItemWidth: 60,
+        spacing: spacing)
     
     
     // MARK: - Overrides
@@ -63,18 +62,34 @@ extension BusesCollectionViewController {
 // MARK: - UI Collection View Delegate Flow Layout
 extension BusesCollectionViewController: UICollectionViewDelegateFlowLayout {
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: itemWidth, height: itemWidth)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return spacing
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return spacing
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: itemWidth, height: itemWidth)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return spacing
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return spacing
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
     }

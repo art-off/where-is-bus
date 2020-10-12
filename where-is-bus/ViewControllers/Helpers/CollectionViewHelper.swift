@@ -10,12 +10,14 @@ import UIKit
 
 class CollectionViewHepler {
     
-    static func getSpacing(byCollectionViewWidth collectionViewWidth: CGFloat, itemWidth: CGFloat, minSpacing: CGFloat) -> CGFloat {
-        let numberOfItemsPerRow = CGFloat(Int((collectionViewWidth - minSpacing) / (itemWidth + minSpacing)))
-        let totalWidthItems = numberOfItemsPerRow * itemWidth
-        let spacing: CGFloat = CGFloat(Int((collectionViewWidth - totalWidthItems) / (numberOfItemsPerRow + 1)))
+    static func getItemWidth(byCollectionViewWidth collectionViewWidth: CGFloat, minItemWidth: CGFloat, spacing: CGFloat) -> CGFloat {
+        let numberOfItemsPerRos = CGFloat(Int((collectionViewWidth - spacing) / (minItemWidth + spacing)))
+        let totalSpacingWidth = (numberOfItemsPerRos + 1) * spacing
+        let itemWidth = CGFloat(Int((collectionViewWidth - totalSpacingWidth) / numberOfItemsPerRos))
         
-        return spacing
+        print(numberOfItemsPerRos, totalSpacingWidth, itemWidth)
+        
+        return itemWidth
     }
     
 }

@@ -24,5 +24,12 @@ class TransportCollectionViewCell: UICollectionViewCell {
     var numberMarches: String! {
         didSet { numberMarchesLabel.text = numberMarches }
     }
+    
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layer.cornerRadius = 15
+    }
 
 }
