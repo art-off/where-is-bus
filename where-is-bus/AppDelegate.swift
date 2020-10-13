@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let apiManager = ApiManager()
+//        let apiManager = ApiManager()
 
 //        apiManager.loadThreeMarches { optionalThreeMarches in
 //            guard let threeMarches = optionalThreeMarches else {

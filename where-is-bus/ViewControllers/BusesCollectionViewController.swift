@@ -19,20 +19,31 @@ class BusesCollectionViewController: UICollectionViewController {
         minItemWidth: 60,
         spacing: spacing)
     
+    // MARK: - Properties for load Marches Title
+    private let apiManager = ApiManager()
+    
+    private let activityIndicatorView = ActivityIndicatorView()
+    private let alertView = AlertView()
+    
+    
     
     // MARK: - Overrides
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+    override func loadView() {
+        super.loadView()
         
         collectionView.register(
-            UINib(nibName: "TransportCollectionViewCell", bundle: nil),
+            TransportCollectionViewCell.self,
             forCellWithReuseIdentifier: reuseIdentifier)
         
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
     }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
 }
 
 
@@ -53,6 +64,7 @@ extension BusesCollectionViewController {
             for: indexPath) as! TransportCollectionViewCell
         
         cell.marcheTitle = String(indexPath.row)
+        cell.numberMarches = "3 / 4"
         
         return cell
     }
@@ -61,22 +73,6 @@ extension BusesCollectionViewController {
 
 // MARK: - UI Collection View Delegate Flow Layout
 extension BusesCollectionViewController: UICollectionViewDelegateFlowLayout {
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: itemWidth, height: itemWidth)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return spacing
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return spacing
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: itemWidth, height: itemWidth)
@@ -92,6 +88,26 @@ extension BusesCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+    }
+    
+}
+
+extension BusesCollectionViewController: AnimatingNetworkProtocol {
+    
+    func animatingSuperViewForDisplay() -> UIView {
+        return view
+    }
+    
+    func animatingViewForDisableUserInteraction() -> UIView {
+        return view
+    }
+    
+    func animatingActivityIndicatorView() -> ActivityIndicatorView {
+        return activityIndicatorView
+    }
+    
+    func animatingAlertView() -> AlertView {
+        return alertView
     }
     
 }
