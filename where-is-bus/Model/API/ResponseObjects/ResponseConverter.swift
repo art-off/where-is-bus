@@ -36,15 +36,17 @@ class ResponseConverter {
 // MARK: - Конвертация ThreeMarchesResponse
 extension ResponseConverter {
     
-    private static func converte(marcheResponse: [String: TMMarcheResponse]?) -> [String: TMMarche]? {
+    private static func converte(marcheResponse: [String: TMMarcheResponse]?) -> [TMMarche]? {
         guard let marcheResponse = marcheResponse else { return nil }
         
-        var marches = [String: TMMarche]()
+        var marches = [TMMarche]()
         for (key, value) in marcheResponse {
             let marche = TMMarche(
-                directionA: converte(marcheDirectionInfoResponse: value.directionA),
-                directionB: converte(marcheDirectionInfoResponse: value.directionB))
-            marches[key] = marche
+                title: key,
+                info: TMMarcheInfo(
+                    directionA: converte(marcheDirectionInfoResponse: value.directionA),
+                    directionB: converte(marcheDirectionInfoResponse: value.directionB)))
+            marches.append(marche)
         }
         
         return marches

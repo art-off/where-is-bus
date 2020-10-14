@@ -15,8 +15,6 @@ class CollectionViewHepler {
         let totalSpacingWidth = (numberOfItemsPerRos + 1) * spacing
         let itemWidth = CGFloat(Int((collectionViewWidth - totalSpacingWidth) / numberOfItemsPerRos))
         
-        print(numberOfItemsPerRos, totalSpacingWidth, itemWidth)
-        
         return itemWidth
     }
     

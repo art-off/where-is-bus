@@ -21,7 +21,7 @@ struct API {
         switch type {
         case .bus:
             marchTitle = "\(marchNumber)"
-        case .trolleybuses:
+        case .trolleybus:
             marchTitle = "\(marchNumber)%F2"
         case .trams:
             marchTitle = "\(marchNumber)%F2%F0"

@@ -4,27 +4,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="jIA-0A-Oas">
-            <objects>
-                <viewController id="Je5-et-AmK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0uf-Ud-pbn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="74W-zM-jdj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="dxs-pu-hGC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mQq-E5-kJt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1793" y="104"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="It9-Eg-Up1">
             <objects>
@@ -44,22 +27,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29k-JK-9eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-130" y="104"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yaC-rG-1AA">
-            <objects>
-                <viewController id="kMp-Le-mh1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="29b-pL-YSl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="U5m-7I-G8z"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="sYJ-4B-bjH"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9SE-t9-PH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1793" y="820"/>
         </scene>
         <!--Автобусы-->
         <scene sceneID="EqD-lD-Cb8">
@@ -118,12 +85,38 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Je5-et-AmK" kind="relationship" relationship="rootViewController" id="Wxs-ji-rJj"/>
+                        <segue destination="dN7-Em-hgG" kind="relationship" relationship="rootViewController" id="4Bx-CW-vzu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHj-vx-tgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980" y="104"/>
+        </scene>
+        <!--Trolleybuses Collection View Controller-->
+        <scene sceneID="Ybd-dC-9GJ">
+            <objects>
+                <collectionViewController id="dN7-Em-hgG" customClass="TrolleybusesCollectionViewController" customModule="where_is_bus" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bca-mn-TnG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HzD-II-rzP">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="dN7-Em-hgG" id="gVt-lF-iqx"/>
+                            <outlet property="delegate" destination="dN7-Em-hgG" id="d24-8c-b1E"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="EZw-3s-2rc"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOJ-FF-1ld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="104"/>
         </scene>
         <!--Трамваи-->
         <scene sceneID="AiB-k1-t8p">
@@ -137,12 +130,38 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kMp-Le-mh1" kind="relationship" relationship="rootViewController" id="m4T-17-0eT"/>
+                        <segue destination="ovE-LC-0sw" kind="relationship" relationship="rootViewController" id="q4E-Fh-7YK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ba-Ip-1pL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980" y="820"/>
+        </scene>
+        <!--Trams Collection View Controller-->
+        <scene sceneID="qF6-ju-k0j">
+            <objects>
+                <collectionViewController id="ovE-LC-0sw" customClass="TramsCollectionViewController" customModule="where_is_bus" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kQ7-S4-3os">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nNO-oY-Oh5">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="ovE-LC-0sw" id="cu0-xM-DL4"/>
+                            <outlet property="delegate" destination="ovE-LC-0sw" id="3M1-PC-Wt1"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="HBx-bk-Hca"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhD-0f-fxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="820"/>
         </scene>
     </scenes>
     <resources>

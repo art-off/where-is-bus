@@ -11,7 +11,7 @@ import Foundation
 enum TransportType {
     
     case bus
-    case trolleybuses
+    case trolleybus
     case trams
 
 }

@@ -10,13 +10,20 @@ import Foundation
 
 struct ThreeMarches {
     
-    let buses: [String: TMMarche]?
-    let trolleybuses: [String: TMMarche]?
-    let trams: [String: TMMarche]?
+    let buses: [TMMarche]?
+    let trolleybuses: [TMMarche]?
+    let trams: [TMMarche]?
     
 }
 
 struct TMMarche {
+    
+    let title: String
+    let info: TMMarcheInfo
+    
+}
+
+struct TMMarcheInfo {
     
     let directionA: TMMarcheDirectionInfo
     let directionB: TMMarcheDirectionInfo
