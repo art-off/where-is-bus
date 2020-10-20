@@ -46,6 +46,7 @@ extension MarcheLineObjectResponse: Decodable {
         case transportDiff = "ts_diff"
         
         // Поля остановки
+        case stopRegistrationNumber = "st_regnum"
         case stopTitle = "st_title"
         case stopArrive = "st_arrive"
     }
@@ -74,11 +75,12 @@ extension MarcheLineObjectResponse: Decodable {
             self = .transport(transport)
         case "stop":
             let dgt = try container.decode(Int.self, forKey: .dgt)
+            let stopRegistrationNumber = try container.decode(Int.self, forKey: .stopRegistrationNumber)
             let stopTitle = try container.decode(String.self, forKey: .stopTitle)
             let stopArrive = try container.decode(String.self, forKey: .stopArrive)
             
             let stop = StopResponse(
-                dgt: dgt, title: stopTitle, arrive: stopArrive)
+                dgt: dgt, registrationNumber: stopRegistrationNumber, title: stopTitle, arrive: stopArrive)
             self = .stop(stop)
         default:
             self = .unsupported

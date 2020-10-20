@@ -16,7 +16,7 @@ struct Marche {
     let forecastTime: String
     
     let directionsInfo: DirectionsInfo
-    let transportsOnEndStop: TransportsOnEndStop
+    let transportsOnEndStop: TransportsOnEndStop?
     
     let marcheLines: MarcheLines
     

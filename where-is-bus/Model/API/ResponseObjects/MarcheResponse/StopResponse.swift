@@ -12,20 +12,21 @@ class StopResponse: Decodable {
     
     let dgt: Int
     //let object: String
-    //let stopRegistrationNumber: Int
+    let stopRegistrationNumber: Int
     let stopTitle: String
     let stopArrive: String
     
     enum CodingKeys: String, CodingKey {
         case dgt
         //case object = "obj"
-        //case stopRegistrationNumber = "st_regnum"
+        case stopRegistrationNumber = "st_regnum"
         case stopTitle = "st_title"
         case stopArrive = "st_arrive"
     }
     
-    init(dgt: Int, title: String, arrive: String) {
+    init(dgt: Int, registrationNumber: Int, title: String, arrive: String) {
         self.dgt = dgt
+        stopRegistrationNumber = registrationNumber
         stopTitle = title
         stopArrive = arrive
     }

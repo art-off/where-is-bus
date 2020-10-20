@@ -32,20 +32,6 @@ class ResponseHandler {
             let threeMarchesResponse = try JSONDecoder().decode(ThreeMarchesResponse.self, from: data)
             let threeMarches = ResponseConverter.converte(threeMarchesResponse: threeMarchesResponse)
             return threeMarches
-            
-            //
-            // Тут нужно сделать так, чтобы сортировался нормас
-            //
-            
-//            let sortFunc: (TMMarche, TMMarche) -> Bool = { m1, m2 in
-//                
-//                return true
-//            }
-            let sortedThreeMarches = ThreeMarches(
-                buses: threeMarches.buses?.sorted(by: { $0.title < $1.title }),
-                trolleybuses: threeMarches.trolleybuses?.sorted(by: { $0.title < $1.title }),
-                trams: threeMarches.trams?.sorted(by: { $0.title < $1.title }))
-            return sortedThreeMarches
         } catch let jsonError {
             NSLog("Load Marches | jsonError = \(jsonError)")
             return nil

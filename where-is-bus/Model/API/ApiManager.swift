@@ -48,8 +48,9 @@ class ApiManager {
         downloadingQueue.addOperation(completionOperation)
     }
     
-    func loadMarche(for marcheNumber: Int, type: TransportType, completion: @escaping (_: Marche?) -> Void) {
-        let url = API.marcheFor(marchNumber: marcheNumber, for: type)
+    func loadMarche(for marcheTitle: String, completion: @escaping (_: Marche?) -> Void) {
+        let url = API.marcheFor(marcheTitle: marcheTitle)
+        print(url)
         
         var downloadedMarche: Marche?
         

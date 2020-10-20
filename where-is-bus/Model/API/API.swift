@@ -13,21 +13,17 @@ struct API {
     private static let adress = "https://mu-kgt.ru/"
     
     static func threeMarches() -> URL {
-        return URL(string: "\(adress)/informing/wap/marsh/?action=getListRoute")!
+        let stringUrl = "\(adress)/informing/wap/marsh/?action=getListRoute"
+        let stringCodeUrl = URLCoder.code(url: stringUrl)
+        
+        return URL(string: stringCodeUrl)!
     }
     
-    static func marcheFor(marchNumber: Int, for type: TransportType) -> URL {
-        let marchTitle: String
-        switch type {
-        case .bus:
-            marchTitle = "\(marchNumber)"
-        case .trolleybus:
-            marchTitle = "\(marchNumber)%F2"
-        case .trams:
-            marchTitle = "\(marchNumber)%F2%F0"
-        }
+    static func marcheFor(marcheTitle: String) -> URL {
+        let stringUrl = "\(adress)/informing/wap/marsh/?m=\(marcheTitle)&action=getMarshData"
+        let stringCodeUrl = URLCoder.code(url: stringUrl)
         
-        return URL(string: "\(adress)/informing/wap/marsh/?m=\(marchTitle)&action=getMarshData")!
+        return URL(string: stringCodeUrl)!
     }
     
 }

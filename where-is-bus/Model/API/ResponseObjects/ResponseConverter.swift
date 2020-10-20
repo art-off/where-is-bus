@@ -16,7 +16,29 @@ class ResponseConverter {
             trolleybuses: converte(marcheResponse: threeMarchesResponse.trolleybuses),
             trams: converte(marcheResponse: threeMarchesResponse.trams))
         
-        return threeMarches
+        let sortFunc: (TMMarche, TMMarche) -> Bool = { m1, m2 in
+            let title1 = m1.title
+            let title2 = m2.title
+            
+            if let numberString1 = title1.firstMarch(with: "\\d+"),
+               let numberString2 = title2.firstMarch(with: "\\d+") {
+                return Int(numberString1)! < Int(numberString2)!
+            }
+            
+            if let alpabets1 = title1.firstMarch(with: "\\D+"),
+               let alpabets2 = title1.firstMarch(with: "\\D+") {
+                return alpabets1 > alpabets2
+            }
+            
+            return title1 < title2
+        }
+        
+        let sortedThreeMarches = ThreeMarches(
+            buses: threeMarches.buses?.sorted(by: sortFunc),
+            trolleybuses: threeMarches.trolleybuses?.sorted(by: sortFunc),
+            trams: threeMarches.trams?.sorted(by: sortFunc))
+        
+        return sortedThreeMarches
     }
     
     static func converte(marcheResponse: MarcheResponse) -> Marche {
@@ -84,7 +106,9 @@ extension ResponseConverter {
         return directionDetailInfo
     }
     
-    private static func converte(transportsOnEndStopResponse: TransportsOnEndStopResponse) -> TransportsOnEndStop {
+    private static func converte(transportsOnEndStopResponse: TransportsOnEndStopResponse?) -> TransportsOnEndStop? {
+        guard let transportsOnEndStopResponse = transportsOnEndStopResponse else { return nil }
+        
         let transportsOnEndStop = TransportsOnEndStop(
             directionA: converte(transportsResponse: transportsOnEndStopResponse.directionA),
             directionB: converte(transportsResponse: transportsOnEndStopResponse.directionB))
@@ -154,6 +178,7 @@ extension ResponseConverter {
     private static func converte(stopResponse: StopResponse) -> Stop {
         let stop = Stop(
             dgt: stopResponse.dgt,
+            registrationNumber: stopResponse.stopRegistrationNumber,
             title: stopResponse.stopTitle,
             arrive: stopResponse.stopArrive)
         

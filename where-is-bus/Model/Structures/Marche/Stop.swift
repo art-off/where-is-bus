@@ -12,7 +12,7 @@ struct Stop {
     
     let dgt: Int
     //let object: String
-    //let stopRegistrationNumber: Int
+    let registrationNumber: Int
     let title: String
     let arrive: String
     

@@ -28,9 +28,12 @@ class TramsCollectionViewController: MarchesCollectionViewController {
     
     // MARK: - Private Methods
     private func loadThreeMarchesAndSetTrams() {
+        startActivityIndicator()
         apiManager.loadThreeMarches { threeMarchesOptional in
             guard let threeMarches = threeMarchesOptional else {
                 NSLog("Don't load Three Marches")
+                self.stopActivityIndicator()
+                self.showAlert(withText: "Проблемы с сервером")
                 return
             }
 
@@ -40,11 +43,14 @@ class TramsCollectionViewController: MarchesCollectionViewController {
 
             guard let trams = threeMarches.trams else {
                 NSLog("ThreeMarches.trams in Nil")
+                self.stopActivityIndicator()
+                self.showAlert(withText: "Проблемы с сервером")
                 return
             }
 
             DispatchQueue.main.async {
                 self.set(marches: trams)
+                self.stopActivityIndicator()
             }
         }
     }

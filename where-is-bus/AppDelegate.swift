@@ -16,25 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        let apiManager = ApiManager()
-
-//        apiManager.loadThreeMarches { optionalThreeMarches in
-//            guard let threeMarches = optionalThreeMarches else {
-//                print("ХУИТА")
-//                return
-//            }
-//
-//            dump(threeMarches)
-//        }
-        
-//        apiManager.loadMarche(for: 60, type: .bus) { optionalMarche in
-//            guard let marche = optionalMarche else {
-//                print("ХУИТА")
-//                return
-//            }
-//            
-//            dump(marche)
-//        }
+        ApiManager().loadMarche(for: "7") { optionalMarche in
+            dump(optionalMarche!)
+        }
         
         return true
     }

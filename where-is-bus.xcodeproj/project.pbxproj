@@ -29,6 +29,8 @@
 		4AA8D9D9252B34BF0059E461 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9D8252B34BF0059E461 /* ApiManager.swift */; };
 		4AA8D9DE252B3DC80059E461 /* ThreeMarchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9DD252B3DC80059E461 /* ThreeMarchesResponse.swift */; };
 		4AADB554252F77FE00ED61A4 /* MarcheResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AADB553252F77FE00ED61A4 /* MarcheResponse.swift */; };
+		4AB3CC1E253937A000637995 /* String+firstMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3CC1D253937A000637995 /* String+firstMatch.swift */; };
+		4AB3CC212539804D00637995 /* URLCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3CC202539804D00637995 /* URLCoder.swift */; };
 		4AD3529A2532E52E007E1177 /* DirectionDetailInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352992532E52E007E1177 /* DirectionDetailInfoResponse.swift */; };
 		4AD3529D2532E692007E1177 /* TransportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3529C2532E692007E1177 /* TransportResponse.swift */; };
 		4AD352A02532E6AE007E1177 /* StopResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3529F2532E6AE007E1177 /* StopResponse.swift */; };
@@ -40,7 +42,6 @@
 		4AD352B52532EAF4007E1177 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352B42532EAF4007E1177 /* Transport.swift */; };
 		4AD352B82532EB2F007E1177 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352B72532EB2F007E1177 /* Stop.swift */; };
 		4AD352BB2532EC0C007E1177 /* MarcheLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352BA2532EC0C007E1177 /* MarcheLines.swift */; };
-		4AD352C025337D1D007E1177 /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352BF25337D1D007E1177 /* TransportType.swift */; };
 		4AD352C625341749007E1177 /* BusesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352C525341749007E1177 /* BusesCollectionViewController.swift */; };
 		4AD352CB25341847007E1177 /* TransportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,8 @@
 		4AA8D9D8252B34BF0059E461 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		4AA8D9DD252B3DC80059E461 /* ThreeMarchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeMarchesResponse.swift; sourceTree = "<group>"; };
 		4AADB553252F77FE00ED61A4 /* MarcheResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheResponse.swift; sourceTree = "<group>"; };
+		4AB3CC1D253937A000637995 /* String+firstMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+firstMatch.swift"; sourceTree = "<group>"; };
+		4AB3CC202539804D00637995 /* URLCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCoder.swift; sourceTree = "<group>"; };
 		4AD352992532E52E007E1177 /* DirectionDetailInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionDetailInfoResponse.swift; sourceTree = "<group>"; };
 		4AD3529C2532E692007E1177 /* TransportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportResponse.swift; sourceTree = "<group>"; };
 		4AD3529F2532E6AE007E1177 /* StopResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopResponse.swift; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		4AD352B42532EAF4007E1177 /* Transport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transport.swift; sourceTree = "<group>"; };
 		4AD352B72532EB2F007E1177 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		4AD352BA2532EC0C007E1177 /* MarcheLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheLines.swift; sourceTree = "<group>"; };
-		4AD352BF25337D1D007E1177 /* TransportType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportType.swift; sourceTree = "<group>"; };
 		4AD352C525341749007E1177 /* BusesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusesCollectionViewController.swift; sourceTree = "<group>"; };
 		4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +168,6 @@
 		4AA8D9D4252B32550059E461 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4AD352BE25337D0F007E1177 /* Enums */,
 				4A6B240B252B7513003D02B2 /* Structures */,
 				4AA8D9D5252B32640059E461 /* API */,
 			);
@@ -176,11 +177,13 @@
 		4AA8D9D5252B32640059E461 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				4AB3CC132539363700637995 /* Extensions */,
 				4AA8D9DA252B396A0059E461 /* ResponseObjects */,
 				4AA8D9D6252B32700059E461 /* API.swift */,
 				4A6B2409252B749D003D02B2 /* ResponseHandler.swift */,
 				4AA8D9D8252B34BF0059E461 /* ApiManager.swift */,
 				4A6BF7E0252C4C570019C935 /* DownloadingOperation.swift */,
+				4AB3CC202539804D00637995 /* URLCoder.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -193,6 +196,14 @@
 				4AD352982532E50A007E1177 /* MarcheResponse */,
 			);
 			path = ResponseObjects;
+			sourceTree = "<group>";
+		};
+		4AB3CC132539363700637995 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4AB3CC1D253937A000637995 /* String+firstMatch.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4AD352982532E50A007E1177 /* MarcheResponse */ = {
@@ -219,14 +230,6 @@
 				4AD352BA2532EC0C007E1177 /* MarcheLines.swift */,
 			);
 			path = Marche;
-			sourceTree = "<group>";
-		};
-		4AD352BE25337D0F007E1177 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				4AD352BF25337D1D007E1177 /* TransportType.swift */,
-			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
 		4AD352C22533833D007E1177 /* ViewControllers */ = {
@@ -327,6 +330,7 @@
 				4A680D222535FF9A00280310 /* Common.swift in Sources */,
 				4A3121C02522E4B300E22C84 /* AppDelegate.swift in Sources */,
 				4AD352CB25341847007E1177 /* TransportCollectionViewCell.swift in Sources */,
+				4AB3CC1E253937A000637995 /* String+firstMatch.swift in Sources */,
 				4A680D2D253768D600280310 /* MarhcesCollectionViewController.swift in Sources */,
 				4AD352B52532EAF4007E1177 /* Transport.swift in Sources */,
 				4AD352AC2532E9E6007E1177 /* Marche.swift in Sources */,
@@ -336,6 +340,7 @@
 				4A6B240F252B8687003D02B2 /* ResponseConverter.swift in Sources */,
 				4A680D272537665400280310 /* TrolleybusesCollectionViewController.swift in Sources */,
 				4A680D05253585E900280310 /* ActivityIndicatioView.swift in Sources */,
+				4AB3CC212539804D00637995 /* URLCoder.swift in Sources */,
 				4AD352A32532E741007E1177 /* TransportOnEndStopResponse.swift in Sources */,
 				4AD352B82532EB2F007E1177 /* Stop.swift in Sources */,
 				4A680D0D25358B0800280310 /* UIView+addConstraints.swift in Sources */,
@@ -355,7 +360,6 @@
 				4A3121C22522E4B300E22C84 /* SceneDelegate.swift in Sources */,
 				4AD352C625341749007E1177 /* BusesCollectionViewController.swift in Sources */,
 				4AD352A02532E6AE007E1177 /* StopResponse.swift in Sources */,
-				4AD352C025337D1D007E1177 /* TransportType.swift in Sources */,
 				4A6BF7E1252C4C570019C935 /* DownloadingOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
