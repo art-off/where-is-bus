@@ -28,11 +28,28 @@ class MarcheDirectionTableViewController: UITableViewController {
     
     
     // MARK: - Overrides
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
+        super.loadView()
         
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
+        
+        tableView.backgroundColor = .clear
+        view.backgroundColor = .clear
+        
+        tableView.register(
+            UINib(nibName: "MarcheDirectionInfoTableViewCell", bundle: nil),
+            forCellReuseIdentifier: MarcheDirectionInfoTableViewCell.reuseIdentifier)
+        tableView.register(
+            UINib(nibName: "StopTableViewCell", bundle: nil),
+            forCellReuseIdentifier: StopTableViewCell.reuseIdentifier)
+        
+        tableView.separatorStyle = .none
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
 
 }
@@ -41,40 +58,48 @@ class MarcheDirectionTableViewController: UITableViewController {
 extension MarcheDirectionTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return marcheDirection.transportsOnEndStop.count + marcheDirection.marcheLine.count
+        if section == 0 { return 1 }
+        else if section == 1 { return marcheDirection.transportsOnEndStop.count }
+        else { return marcheDirection.marcheLine.count }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
-        if indexPath.row < marcheDirection.transportsOnEndStop.count {
-            let transtopt = marcheDirection.transportsOnEndStop[indexPath.row]
-            cell.textLabel?.text = transtopt.comment
-            cell.textLabel?.textColor = .white
-            cell.backgroundColor = .link
-
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: MarcheDirectionInfoTableViewCell.reuseIdentifier, for: indexPath) as! MarcheDirectionInfoTableViewCell
+            cell.firstStop = marcheDirection.directionInfo.firstStop
+            cell.lastStop = marcheDirection.directionInfo.lastStop
             return cell
-        }
-        
-        let index = indexPath.row - marcheDirection.transportsOnEndStop.count
-        let object = marcheDirection.marcheLine[index]
-        
-        switch object {
-        case .stop(let stop):
-            cell.textLabel?.text = stop.title
-        case .transport(let transport):
+        } else if indexPath.section == 1 {
+            let transport = marcheDirection.transportsOnEndStop[indexPath.row]
+            let cell = UITableViewCell()
             cell.textLabel?.text = transport.comment
-            cell.backgroundColor = .link
             cell.textLabel?.textColor = .white
-        case .unsupported:
-            break
+            cell.backgroundColor = .link
+            return cell
+        } else {
+            let object = marcheDirection.marcheLine[indexPath.row]
+            
+            switch object {
+            case .stop(let stop):
+                let cell = tableView.dequeueReusableCell(withIdentifier: StopTableViewCell.reuseIdentifier, for: indexPath) as! StopTableViewCell
+                cell.time = stop.arrive
+                cell.title = stop.title
+                return cell
+            case .transport(let transport):
+                let cell = UITableViewCell()
+                cell.textLabel?.text = transport.comment
+                //
+                // Юзать .systemOrange или .orange для автобусов
+                //
+                return cell
+            case .unsupported:
+                return UITableViewCell()
+            }
         }
-
-        return cell
     }
     
 }

@@ -28,6 +28,8 @@
 		4A6B240D252B7568003D02B2 /* ThreeMarches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B240C252B7568003D02B2 /* ThreeMarches.swift */; };
 		4A6B240F252B8687003D02B2 /* ResponseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B240E252B8687003D02B2 /* ResponseConverter.swift */; };
 		4A6BF7E1252C4C570019C935 /* DownloadingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BF7E0252C4C570019C935 /* DownloadingOperation.swift */; };
+		4A791F6A25402220009E1930 /* MarcheDirectionInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A791F6825402220009E1930 /* MarcheDirectionInfoTableViewCell.swift */; };
+		4A791F6B25402220009E1930 /* MarcheDirectionInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A791F6925402220009E1930 /* MarcheDirectionInfoTableViewCell.xib */; };
 		4AA8D9D7252B32700059E461 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9D6252B32700059E461 /* API.swift */; };
 		4AA8D9D9252B34BF0059E461 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9D8252B34BF0059E461 /* ApiManager.swift */; };
 		4AA8D9DE252B3DC80059E461 /* ThreeMarchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA8D9DD252B3DC80059E461 /* ThreeMarchesResponse.swift */; };
@@ -47,6 +49,9 @@
 		4AD352BB2532EC0C007E1177 /* MarcheLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352BA2532EC0C007E1177 /* MarcheLines.swift */; };
 		4AD352C625341749007E1177 /* BusesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352C525341749007E1177 /* BusesCollectionViewController.swift */; };
 		4AD352CB25341847007E1177 /* TransportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */; };
+		4ADA86E72540A41E00D4AC4B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA86E62540A41E00D4AC4B /* Colors.swift */; };
+		4ADA86F32540A96000D4AC4B /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA86F12540A96000D4AC4B /* StopTableViewCell.swift */; };
+		4ADA86F42540A96000D4AC4B /* StopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADA86F22540A96000D4AC4B /* StopTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +78,8 @@
 		4A6B240C252B7568003D02B2 /* ThreeMarches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeMarches.swift; sourceTree = "<group>"; };
 		4A6B240E252B8687003D02B2 /* ResponseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseConverter.swift; sourceTree = "<group>"; };
 		4A6BF7E0252C4C570019C935 /* DownloadingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingOperation.swift; sourceTree = "<group>"; };
+		4A791F6825402220009E1930 /* MarcheDirectionInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheDirectionInfoTableViewCell.swift; sourceTree = "<group>"; };
+		4A791F6925402220009E1930 /* MarcheDirectionInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarcheDirectionInfoTableViewCell.xib; sourceTree = "<group>"; };
 		4AA8D9D6252B32700059E461 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4AA8D9D8252B34BF0059E461 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		4AA8D9DD252B3DC80059E461 /* ThreeMarchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeMarchesResponse.swift; sourceTree = "<group>"; };
@@ -92,6 +99,9 @@
 		4AD352BA2532EC0C007E1177 /* MarcheLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheLines.swift; sourceTree = "<group>"; };
 		4AD352C525341749007E1177 /* BusesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusesCollectionViewController.swift; sourceTree = "<group>"; };
 		4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportCollectionViewCell.swift; sourceTree = "<group>"; };
+		4ADA86E62540A41E00D4AC4B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		4ADA86F12540A96000D4AC4B /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
+		4ADA86F22540A96000D4AC4B /* StopTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +185,7 @@
 		4AA8D9D4252B32550059E461 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4ADA86E52540A3FE00D4AC4B /* Style */,
 				4A6B240B252B7513003D02B2 /* Structures */,
 				4AA8D9D5252B32640059E461 /* API */,
 			);
@@ -261,8 +272,28 @@
 				4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */,
 				4A680D04253585E900280310 /* ActivityIndicatioView.swift */,
 				4A680D1125358E0200280310 /* AlertView.swift */,
+				4ADA86F62540B12600D4AC4B /* MarcheDirectionTableVIews */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4ADA86E52540A3FE00D4AC4B /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				4ADA86E62540A41E00D4AC4B /* Colors.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		4ADA86F62540B12600D4AC4B /* MarcheDirectionTableVIews */ = {
+			isa = PBXGroup;
+			children = (
+				4A791F6825402220009E1930 /* MarcheDirectionInfoTableViewCell.swift */,
+				4A791F6925402220009E1930 /* MarcheDirectionInfoTableViewCell.xib */,
+				4ADA86F12540A96000D4AC4B /* StopTableViewCell.swift */,
+				4ADA86F22540A96000D4AC4B /* StopTableViewCell.xib */,
+			);
+			path = MarcheDirectionTableVIews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +355,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3121CC2522E4B400E22C84 /* LaunchScreen.storyboard in Resources */,
+				4A791F6B25402220009E1930 /* MarcheDirectionInfoTableViewCell.xib in Resources */,
+				4ADA86F42540A96000D4AC4B /* StopTableViewCell.xib in Resources */,
 				4A3121C92522E4B400E22C84 /* Assets.xcassets in Resources */,
 				4A3121C72522E4B300E22C84 /* Main.storyboard in Resources */,
 			);
@@ -337,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A680D222535FF9A00280310 /* Common.swift in Sources */,
+				4A791F6A25402220009E1930 /* MarcheDirectionInfoTableViewCell.swift in Sources */,
 				4A3121C02522E4B300E22C84 /* AppDelegate.swift in Sources */,
 				4AD352CB25341847007E1177 /* TransportCollectionViewCell.swift in Sources */,
 				4AB3CC1E253937A000637995 /* String+firstMatch.swift in Sources */,
@@ -362,6 +396,7 @@
 				4A633C77253FDA9200B85CB0 /* MarcheDirection.swift in Sources */,
 				4AADB554252F77FE00ED61A4 /* MarcheResponse.swift in Sources */,
 				4A6B240A252B749D003D02B2 /* ResponseHandler.swift in Sources */,
+				4ADA86F32540A96000D4AC4B /* StopTableViewCell.swift in Sources */,
 				4AD352A72532E90C007E1177 /* MarcheLinesResponse.swift in Sources */,
 				4A633C7A253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift in Sources */,
 				4A680D0925358A8C00280310 /* AnimatingNetworkProtocol.swift in Sources */,
@@ -369,6 +404,7 @@
 				4AD3529D2532E692007E1177 /* TransportResponse.swift in Sources */,
 				4A6B240D252B7568003D02B2 /* ThreeMarches.swift in Sources */,
 				4AD3529A2532E52E007E1177 /* DirectionDetailInfoResponse.swift in Sources */,
+				4ADA86E72540A41E00D4AC4B /* Colors.swift in Sources */,
 				4A3121C22522E4B300E22C84 /* SceneDelegate.swift in Sources */,
 				4AD352C625341749007E1177 /* BusesCollectionViewController.swift in Sources */,
 				4AD352A02532E6AE007E1177 /* StopResponse.swift in Sources */,

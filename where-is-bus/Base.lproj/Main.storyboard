@@ -118,16 +118,6 @@
             </objects>
             <point key="canvasLocation" x="1793" y="104"/>
         </scene>
-        <!--Marche Page View Controller-->
-        <scene sceneID="VQQ-Yo-8pH">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Rhz-UP-avA" customClass="MarchePageViewController" customModule="where_is_bus" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="i5N-nP-WIH"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H0Y-c6-tlG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3283" y="-257"/>
-        </scene>
         <!--Трамваи-->
         <scene sceneID="AiB-k1-t8p">
             <objects>

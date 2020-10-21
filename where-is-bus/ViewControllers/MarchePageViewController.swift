@@ -38,10 +38,14 @@ class MarchePageViewController: UIPageViewController {
     
     
     // MARK: - Overrides
+    override func loadView() {
+        super.loadView()
+        
+        view.backgroundColor = Colors.backgroundColor
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .brown
         
         dataSource = self
         
