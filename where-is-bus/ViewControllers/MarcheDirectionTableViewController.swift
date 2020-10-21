@@ -33,7 +33,6 @@ class MarcheDirectionTableViewController: UITableViewController {
         
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
-        
     }
 
 }
@@ -46,22 +45,23 @@ extension MarcheDirectionTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (marcheDirection.transportsOnEndStop?.count ?? 0) + marcheDirection.marcheLine.count
+        return marcheDirection.transportsOnEndStop.count + marcheDirection.marcheLine.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        if indexPath.row < (marcheDirection.transportsOnEndStop?.count ?? 0) {
-            let transtopt = marcheDirection.transportsOnEndStop![indexPath.row]
+        if indexPath.row < marcheDirection.transportsOnEndStop.count {
+            let transtopt = marcheDirection.transportsOnEndStop[indexPath.row]
             cell.textLabel?.text = transtopt.comment
             cell.textLabel?.textColor = .white
             cell.backgroundColor = .link
-            
+
             return cell
         }
         
-        let object = marcheDirection.marcheLine[indexPath.row]
+        let index = indexPath.row - marcheDirection.transportsOnEndStop.count
+        let object = marcheDirection.marcheLine[index]
         
         switch object {
         case .stop(let stop):

@@ -17,7 +17,7 @@ struct MarcheDirection {
     let forecastTime: String
     
     let directionInfo: DirectionDetailInfo
-    let transportsOnEndStop: [Transport]?
+    let transportsOnEndStop: [Transport]
     let marcheLine: [MarcheLineObject]
     
     enum DirectionType {
@@ -34,11 +34,19 @@ struct MarcheDirection {
         switch directionType {
         case .directionA:
             self.directionInfo = marche.directionsInfo.directionA
-            self.transportsOnEndStop = marche.transportsOnEndStop?.directionA
+            if let toes = marche.transportsOnEndStop?.directionA {
+                transportsOnEndStop = toes
+            } else {
+                transportsOnEndStop = []
+            }
             self.marcheLine = marche.marcheLines.directionA
         case .directionB:
             self.directionInfo = marche.directionsInfo.directionB
-            self.transportsOnEndStop = marche.transportsOnEndStop?.directionB
+            if let toes = marche.transportsOnEndStop?.directionB {
+                transportsOnEndStop = toes
+            } else {
+                transportsOnEndStop = []
+            }
             self.marcheLine = marche.marcheLines.directionB
         }
     }
