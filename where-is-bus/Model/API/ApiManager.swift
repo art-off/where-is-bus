@@ -50,7 +50,6 @@ class ApiManager {
     
     func loadMarche(for marcheTitle: String, completion: @escaping (_: Marche?) -> Void) {
         let url = API.marcheFor(marcheTitle: marcheTitle)
-        print(url)
         
         var downloadedMarche: Marche?
         

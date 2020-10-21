@@ -18,6 +18,9 @@ class BusesCollectionViewController: MarchesCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Автобусы"
+        navigationItem.largeTitleDisplayMode = .never
+        
         if let buses = Common.shared.threeMarches?.buses {
             marches = buses
         } else {
@@ -50,6 +53,35 @@ class BusesCollectionViewController: MarchesCollectionViewController {
 
             DispatchQueue.main.async {
                 self.set(marches: buses)
+                self.stopActivityIndicator()
+            }
+        }
+    }
+    
+}
+
+// MARK: - Collection View Controller Delegate
+extension BusesCollectionViewController {
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let title = marches[indexPath.row].title
+        
+        startActivityIndicator()
+        apiManager.loadMarche(for: title) { optionalMarche in
+            guard let marche = optionalMarche else {
+                DispatchQueue.main.async {
+                    self.stopActivityIndicator()
+                    self.showNetworkAlert()
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                let vc = MarchePageViewController(marche: marche)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            DispatchQueue.main.async {
                 self.stopActivityIndicator()
             }
         }

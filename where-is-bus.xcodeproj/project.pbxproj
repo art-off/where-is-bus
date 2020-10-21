@@ -12,6 +12,9 @@
 		4A3121C72522E4B300E22C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3121C52522E4B300E22C84 /* Main.storyboard */; };
 		4A3121C92522E4B400E22C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3121C82522E4B400E22C84 /* Assets.xcassets */; };
 		4A3121CC2522E4B400E22C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3121CA2522E4B400E22C84 /* LaunchScreen.storyboard */; };
+		4A633C73253F4E4F00B85CB0 /* MarchePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A633C72253F4E4F00B85CB0 /* MarchePageViewController.swift */; };
+		4A633C77253FDA9200B85CB0 /* MarcheDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A633C76253FDA9200B85CB0 /* MarcheDirection.swift */; };
+		4A633C7A253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A633C79253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift */; };
 		4A680D022534CE8000280310 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A680D012534CE8000280310 /* CollectionViewHelper.swift */; };
 		4A680D05253585E900280310 /* ActivityIndicatioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A680D04253585E900280310 /* ActivityIndicatioView.swift */; };
 		4A680D0925358A8C00280310 /* AnimatingNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A680D0825358A8C00280310 /* AnimatingNetworkProtocol.swift */; };
@@ -54,6 +57,9 @@
 		4A3121C82522E4B400E22C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A3121CB2522E4B400E22C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A3121CD2522E4B400E22C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A633C72253F4E4F00B85CB0 /* MarchePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarchePageViewController.swift; sourceTree = "<group>"; };
+		4A633C76253FDA9200B85CB0 /* MarcheDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheDirection.swift; sourceTree = "<group>"; };
+		4A633C79253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheDirectionTableViewController.swift; sourceTree = "<group>"; };
 		4A680D012534CE8000280310 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
 		4A680D04253585E900280310 /* ActivityIndicatioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatioView.swift; sourceTree = "<group>"; };
 		4A680D0825358A8C00280310 /* AnimatingNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingNetworkProtocol.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 			children = (
 				4AD352AA2532E9D6007E1177 /* Marche */,
 				4A6B240C252B7568003D02B2 /* ThreeMarches.swift */,
+				4A633C76253FDA9200B85CB0 /* MarcheDirection.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -242,6 +249,8 @@
 				4AD352C525341749007E1177 /* BusesCollectionViewController.swift */,
 				4A680D262537665400280310 /* TrolleybusesCollectionViewController.swift */,
 				4A680D29253767A400280310 /* TramsCollectionViewController.swift */,
+				4A633C72253F4E4F00B85CB0 /* MarchePageViewController.swift */,
+				4A633C79253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -332,6 +341,7 @@
 				4AD352CB25341847007E1177 /* TransportCollectionViewCell.swift in Sources */,
 				4AB3CC1E253937A000637995 /* String+firstMatch.swift in Sources */,
 				4A680D2D253768D600280310 /* MarhcesCollectionViewController.swift in Sources */,
+				4A633C73253F4E4F00B85CB0 /* MarchePageViewController.swift in Sources */,
 				4AD352B52532EAF4007E1177 /* Transport.swift in Sources */,
 				4AD352AC2532E9E6007E1177 /* Marche.swift in Sources */,
 				4AD352BB2532EC0C007E1177 /* MarcheLines.swift in Sources */,
@@ -349,9 +359,11 @@
 				4A680D2A253767A500280310 /* TramsCollectionViewController.swift in Sources */,
 				4AA8D9D7252B32700059E461 /* API.swift in Sources */,
 				4A680D022534CE8000280310 /* CollectionViewHelper.swift in Sources */,
+				4A633C77253FDA9200B85CB0 /* MarcheDirection.swift in Sources */,
 				4AADB554252F77FE00ED61A4 /* MarcheResponse.swift in Sources */,
 				4A6B240A252B749D003D02B2 /* ResponseHandler.swift in Sources */,
 				4AD352A72532E90C007E1177 /* MarcheLinesResponse.swift in Sources */,
+				4A633C7A253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift in Sources */,
 				4A680D0925358A8C00280310 /* AnimatingNetworkProtocol.swift in Sources */,
 				4AD352AF2532EA7A007E1177 /* DirectionDetailInfo.swift in Sources */,
 				4AD3529D2532E692007E1177 /* TransportResponse.swift in Sources */,
