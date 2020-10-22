@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ApiManager {
     
@@ -70,6 +71,31 @@ class ApiManager {
         completionOperation.addDependency(marcheDownloadingOperation)
         
         downloadingQueue.addOperation(marcheDownloadingOperation)
+        downloadingQueue.addOperation(completionOperation)
+    }
+    
+    func downloadImage(imageName: String, completion: @escaping (_: UIImage?) -> Void) {
+        let url = API.image(name: imageName)
+        
+        var downloadedImage: UIImage?
+        
+        let completionOperation = BlockOperation {
+            completion(downloadedImage)
+        }
+        
+        let imageDownloadingOperation = DownloadOperation(session: session, url: url) { data, response, error in
+            guard let image = ResponseHandler.hundleImage(data, response, error) else {
+                NSLog("Api Manager Load Image | image is Nil")
+                completion(nil)
+                self.downloadingQueue.cancelAllOperations()
+                return
+            }
+            downloadedImage = image
+        }
+        
+        completionOperation.addDependency(imageDownloadingOperation)
+        
+        downloadingQueue.addOperation(imageDownloadingOperation)
         downloadingQueue.addOperation(completionOperation)
     }
     

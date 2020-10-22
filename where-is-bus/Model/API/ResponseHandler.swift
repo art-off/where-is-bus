@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ResponseHandler {
     
@@ -64,6 +65,29 @@ class ResponseHandler {
             NSLog("Load Marche | jsonError = \(jsonError)")
             return nil
         }
+    }
+    
+    static func hundleImage(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> UIImage? {
+        guard error == nil else {
+            NSLog("Load Image | Error")
+            return nil
+        }
+        guard let httpResponse = response as? HTTPURLResponse else {
+            NSLog("Load Image | Response is not HTTPURLResponse")
+            return nil
+        }
+        guard (200..<300).contains(httpResponse.statusCode) else {
+            NSLog("Load Image | Status code = \(httpResponse.statusCode)")
+            return nil
+        }
+        guard let data = data else {
+            NSLog("Load Image | Data is nil")
+            return nil
+        }
+        
+        let image = UIImage(data: data)
+        
+        return image
     }
     
 }

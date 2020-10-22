@@ -32,6 +32,7 @@ class MarchePageViewController: UIPageViewController {
     
     func set(marche: Marche) {
         self.marche = marche
+        navigationItem.title = marche.title
         pageViewControllers[0].set(marcheDirection: MarcheDirection(marche: marche, by: .directionA))
         pageViewControllers[1].set(marcheDirection: MarcheDirection(marche: marche, by: .directionB))
     }

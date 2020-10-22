@@ -43,6 +43,9 @@ class MarcheDirectionTableViewController: UITableViewController {
         tableView.register(
             UINib(nibName: "StopTableViewCell", bundle: nil),
             forCellReuseIdentifier: StopTableViewCell.reuseIdentifier)
+        tableView.register(
+            UINib(nibName: "TransportTableViewCell", bundle: nil),
+            forCellReuseIdentifier: TransportTableViewCell.reuseIdentifier)
         
         tableView.separatorStyle = .none
     }
@@ -75,10 +78,8 @@ extension MarcheDirectionTableViewController {
             return cell
         } else if indexPath.section == 1 {
             let transport = marcheDirection.transportsOnEndStop[indexPath.row]
-            let cell = UITableViewCell()
-            cell.textLabel?.text = transport.comment
-            cell.textLabel?.textColor = .white
-            cell.backgroundColor = .link
+            let cell = tableView.dequeueReusableCell(withIdentifier: TransportTableViewCell.reuseIdentifier, for: indexPath) as! TransportTableViewCell
+            cell.comment = transport.comment
             return cell
         } else {
             let object = marcheDirection.marcheLine[indexPath.row]
@@ -90,16 +91,21 @@ extension MarcheDirectionTableViewController {
                 cell.title = stop.title
                 return cell
             case .transport(let transport):
-                let cell = UITableViewCell()
-                cell.textLabel?.text = transport.comment
-                //
-                // Юзать .systemOrange или .orange для автобусов
-                //
+                let cell = tableView.dequeueReusableCell(withIdentifier: TransportTableViewCell.reuseIdentifier, for: indexPath) as! TransportTableViewCell
+                cell.comment = transport.comment
                 return cell
             case .unsupported:
                 return UITableViewCell()
             }
         }
     }
+    
+}
+
+
+// MARK: - Load transport Icons
+extension MarcheDirectionTableViewController {
+    
+    
     
 }

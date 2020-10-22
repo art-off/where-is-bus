@@ -15,6 +15,8 @@ class StopTableViewCell: UITableViewCell {
     // MARK: - Outlers
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var separatorView: UIView!
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -31,12 +33,13 @@ class StopTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        containerView.layer.cornerRadius = 15
+        
+        containerView.backgroundColor = .link
+        timeLabel.textColor = .white
+        titleLabel.textColor = .white
+        
+        containerView.makeShadow(color: .black, opacity: 0.5, radius: 2)
     }
     
 }
