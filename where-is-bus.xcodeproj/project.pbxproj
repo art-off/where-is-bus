@@ -15,6 +15,10 @@
 		4A633C73253F4E4F00B85CB0 /* MarchePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A633C72253F4E4F00B85CB0 /* MarchePageViewController.swift */; };
 		4A633C77253FDA9200B85CB0 /* MarcheDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A633C76253FDA9200B85CB0 /* MarcheDirection.swift */; };
 		4A633C7A253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A633C79253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift */; };
+		4A6451E62541CBB200C22517 /* TransportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6451E42541CBB200C22517 /* TransportTableViewCell.swift */; };
+		4A6451E72541CBB200C22517 /* TransportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6451E52541CBB200C22517 /* TransportTableViewCell.xib */; };
+		4A6451EB2541D7CB00C22517 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6451EA2541D7CB00C22517 /* ImageManager.swift */; };
+		4A6451EF2541E83100C22517 /* UIView+shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6451EE2541E83100C22517 /* UIView+shadow.swift */; };
 		4A680D022534CE8000280310 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A680D012534CE8000280310 /* CollectionViewHelper.swift */; };
 		4A680D05253585E900280310 /* ActivityIndicatioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A680D04253585E900280310 /* ActivityIndicatioView.swift */; };
 		4A680D0925358A8C00280310 /* AnimatingNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A680D0825358A8C00280310 /* AnimatingNetworkProtocol.swift */; };
@@ -65,6 +69,10 @@
 		4A633C72253F4E4F00B85CB0 /* MarchePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarchePageViewController.swift; sourceTree = "<group>"; };
 		4A633C76253FDA9200B85CB0 /* MarcheDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheDirection.swift; sourceTree = "<group>"; };
 		4A633C79253FDBBD00B85CB0 /* MarcheDirectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcheDirectionTableViewController.swift; sourceTree = "<group>"; };
+		4A6451E42541CBB200C22517 /* TransportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportTableViewCell.swift; sourceTree = "<group>"; };
+		4A6451E52541CBB200C22517 /* TransportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransportTableViewCell.xib; sourceTree = "<group>"; };
+		4A6451EA2541D7CB00C22517 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		4A6451EE2541E83100C22517 /* UIView+shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shadow.swift"; sourceTree = "<group>"; };
 		4A680D012534CE8000280310 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
 		4A680D04253585E900280310 /* ActivityIndicatioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatioView.swift; sourceTree = "<group>"; };
 		4A680D0825358A8C00280310 /* AnimatingNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingNetworkProtocol.swift; sourceTree = "<group>"; };
@@ -148,6 +156,22 @@
 			path = "where-is-bus";
 			sourceTree = "<group>";
 		};
+		4A6451E92541D7B800C22517 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4A6451EA2541D7CB00C22517 /* ImageManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4A6451ED2541E82200C22517 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A6451EE2541E83100C22517 /* UIView+shadow.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4A680D002534CE6600280310 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +209,7 @@
 		4AA8D9D4252B32550059E461 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A6451E92541D7B800C22517 /* Data */,
 				4ADA86E52540A3FE00D4AC4B /* Style */,
 				4A6B240B252B7513003D02B2 /* Structures */,
 				4AA8D9D5252B32640059E461 /* API */,
@@ -269,6 +294,7 @@
 		4AD352C8253417F7007E1177 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A6451ED2541E82200C22517 /* Extensions */,
 				4AD352C925341847007E1177 /* TransportCollectionViewCell.swift */,
 				4A680D04253585E900280310 /* ActivityIndicatioView.swift */,
 				4A680D1125358E0200280310 /* AlertView.swift */,
@@ -292,6 +318,8 @@
 				4A791F6925402220009E1930 /* MarcheDirectionInfoTableViewCell.xib */,
 				4ADA86F12540A96000D4AC4B /* StopTableViewCell.swift */,
 				4ADA86F22540A96000D4AC4B /* StopTableViewCell.xib */,
+				4A6451E42541CBB200C22517 /* TransportTableViewCell.swift */,
+				4A6451E52541CBB200C22517 /* TransportTableViewCell.xib */,
 			);
 			path = MarcheDirectionTableVIews;
 			sourceTree = "<group>";
@@ -357,6 +385,7 @@
 				4A3121CC2522E4B400E22C84 /* LaunchScreen.storyboard in Resources */,
 				4A791F6B25402220009E1930 /* MarcheDirectionInfoTableViewCell.xib in Resources */,
 				4ADA86F42540A96000D4AC4B /* StopTableViewCell.xib in Resources */,
+				4A6451E72541CBB200C22517 /* TransportTableViewCell.xib in Resources */,
 				4A3121C92522E4B400E22C84 /* Assets.xcassets in Resources */,
 				4A3121C72522E4B300E22C84 /* Main.storyboard in Resources */,
 			);
@@ -378,11 +407,13 @@
 				4A633C73253F4E4F00B85CB0 /* MarchePageViewController.swift in Sources */,
 				4AD352B52532EAF4007E1177 /* Transport.swift in Sources */,
 				4AD352AC2532E9E6007E1177 /* Marche.swift in Sources */,
+				4A6451EB2541D7CB00C22517 /* ImageManager.swift in Sources */,
 				4AD352BB2532EC0C007E1177 /* MarcheLines.swift in Sources */,
 				4A680D1225358E0200280310 /* AlertView.swift in Sources */,
 				4AD352B22532EAB8007E1177 /* TransportOnEndStop.swift in Sources */,
 				4A6B240F252B8687003D02B2 /* ResponseConverter.swift in Sources */,
 				4A680D272537665400280310 /* TrolleybusesCollectionViewController.swift in Sources */,
+				4A6451E62541CBB200C22517 /* TransportTableViewCell.swift in Sources */,
 				4A680D05253585E900280310 /* ActivityIndicatioView.swift in Sources */,
 				4AB3CC212539804D00637995 /* URLCoder.swift in Sources */,
 				4AD352A32532E741007E1177 /* TransportOnEndStopResponse.swift in Sources */,
@@ -403,6 +434,7 @@
 				4AD352AF2532EA7A007E1177 /* DirectionDetailInfo.swift in Sources */,
 				4AD3529D2532E692007E1177 /* TransportResponse.swift in Sources */,
 				4A6B240D252B7568003D02B2 /* ThreeMarches.swift in Sources */,
+				4A6451EF2541E83100C22517 /* UIView+shadow.swift in Sources */,
 				4AD3529A2532E52E007E1177 /* DirectionDetailInfoResponse.swift in Sources */,
 				4ADA86E72540A41E00D4AC4B /* Colors.swift in Sources */,
 				4A3121C22522E4B300E22C84 /* SceneDelegate.swift in Sources */,

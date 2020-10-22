@@ -39,15 +39,8 @@ class MarcheDirectionInfoTableViewCell: UITableViewCell {
         lastStopLabel.textColor = .white
         
         //isUserInteractionEnabled = false
-        
-        makeShadow()
-    }
-    
-    private func makeShadow() {
-        containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.shadowOpacity = 0.5
-        containerView.layer.shadowOffset = .zero
-        containerView.layer.shadowRadius = 5
+
+        containerView.makeShadow(color: .black, opacity: 0.5, radius: 5)
     }
     
 }

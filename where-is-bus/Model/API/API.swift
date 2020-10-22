@@ -26,4 +26,11 @@ struct API {
         return URL(string: stringCodeUrl)!
     }
     
+    static func image(name: String) -> URL {
+        let stringUrl = "\(adress)/informing/wap/marsh/img/\(name)"
+        let stringCodeUrl = URLCoder.code(url: stringUrl)
+        
+        return URL(string: stringCodeUrl)!
+    }
+    
 }

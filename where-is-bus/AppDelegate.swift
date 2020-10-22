@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        ApiManager().loadMarche(for: "7") { optionalMarche in
-//            dump(optionalMarche!)
+//        ApiManager().downloadImage(imageName: "bus_sv_r.png") { optionalImage in
+//            print(optionalImage)
 //        }
         
         return true
