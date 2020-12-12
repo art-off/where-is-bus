@@ -80,6 +80,7 @@ extension MarcheDirectionTableViewController {
             let transport = marcheDirection.transportsOnEndStop[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: TransportTableViewCell.reuseIdentifier, for: indexPath) as! TransportTableViewCell
             cell.comment = transport.comment
+            cell.setImage(name: transport.image)
             return cell
         } else {
             let object = marcheDirection.marcheLine[indexPath.row]

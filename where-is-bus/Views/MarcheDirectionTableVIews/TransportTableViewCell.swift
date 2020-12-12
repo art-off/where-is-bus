@@ -42,10 +42,13 @@ class TransportTableViewCell: UITableViewCell {
         imageConteinerView.backgroundColor = .white
         
         containerView.makeShadow(color: .black, opacity: 0.5, radius: 2)
+    }
+    
+    // MARK: - Methods
+    func setImage(name: String) {
+        imageView?.image = nil
         
-        
-        // TODO: Сделать нормальное присвоение
-        ApiManager().downloadImage(imageName: "bus_sv_r.png") { optionalImage in
+        ApiManager().downloadImage(imageName: name) { optionalImage in
             guard let image = optionalImage else { return }
             
             DispatchQueue.main.async {
@@ -54,13 +57,6 @@ class TransportTableViewCell: UITableViewCell {
                 self.transportImageView.image = image
             }
         }
-    }
-    
-    // MARK: - Methods
-    func setImage(name: String) {
-        imageView?.image = nil
-        
-        
     }
     
 }
